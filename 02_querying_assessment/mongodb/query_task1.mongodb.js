@@ -8,6 +8,9 @@
 // Bonus: The dataset is identical in the PostgreSQL database, meaning the same business insight can be retrieved.
 // Write the equivalent query for PostgreSQL. See query_task1_bonus.sql
 
+use("chrome-burger-db");
+db.menu_items.find({price: {$lt: 10.00}});
+
 // ---------------------------------------------------------------
 // Your thinking process (required)
 // ---------------------------------------------------------------
@@ -16,5 +19,7 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: โจทย์นี้ให้หา menu items ที่คาต่ำกว่า 10.00 ผมเลยเริ่มจากการดูโครงสร้าง database ว่า Document ที่เก็บราคาชื่ออะไร
+// พอได้ราคามาแล้วทีนี้ก็คิดต่อว่าสัญลักษณ์ operater คืออะไรเพราะมันไม่เหมือนกับ javascript เลยไปดู exercise สัปดาห์ที่ 2 เลยได้คำตอบมาคือ $lt
+// สุดท้ายก็ใช้คำสั่ง find หา price ที่ $lt ต่ำกว่า 10.00 ครับ
 //
