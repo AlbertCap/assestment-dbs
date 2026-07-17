@@ -8,6 +8,9 @@
 -- Bonus: The dataset is identical in the MongoDB database, meaning the same business insight can be retrieved.
 -- Write the equivalent query for MongoDB. See query_task1_bonus.mongodb.js
 
+SELECT name, price  FROM menuitems
+WHERE category = 'Side';
+
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
 -- ---------------------------------------------------------------
@@ -16,5 +19,6 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ข้อนี้ต้องที่คิดไว้อยากแรกต้องเห็นข้อมูลทั้งหมดด้วยการ SELECT * เพื่อที่จะได้เห็นตารางภาพรวม 
+-- แล้วก็ SELECT คอลัมน์แค่ 2 อันคือ name กับ price โดยเราจะเข้าไปบอกว่าเอา category = Side โดยใช้ WHERE
 --
