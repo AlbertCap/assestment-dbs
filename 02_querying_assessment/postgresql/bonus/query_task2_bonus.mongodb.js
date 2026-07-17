@@ -8,6 +8,10 @@
 // Hint: Write a query on the staff collection to find the first_name and last_name
 // of all documents where the role is 'Cook'.
 
+use("chrome-burger-db");
+db.staff.find({role: "Cook"},{_id: 0, first_name: 1, last_name: 1});
+
+
 // ---------------------------------------------------------------
 // Your thinking process (required)
 // ---------------------------------------------------------------
@@ -16,5 +20,5 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: ข้อนี่คอนเซ็ปคล้ายๆข้อ 1 แค่เปลียนตารางครับ
 //

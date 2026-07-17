@@ -8,6 +8,9 @@
 // Hint: Write a query on the menu_items collection to find the name and price
 // of all documents where the category is 'Side'.
 
+use("chrome-burger-db");
+db.menu_items.find({category: "Side"},{_id: 0, name: 1, price: 1});
+
 // ---------------------------------------------------------------
 // Your thinking process (required)
 // ---------------------------------------------------------------
@@ -16,5 +19,6 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: พอมาเป็น mongo เหมือนมันต้องสลับกับ SQL
+// เราต้องเริ่มคิดก่อนว่าจะเอาข้อมูล category เฉพาะอะไร แล้วแสดงข้อมูลขนาดไหน
 //
