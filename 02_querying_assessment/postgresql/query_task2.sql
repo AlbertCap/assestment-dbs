@@ -7,6 +7,8 @@
 
 -- Bonus: The dataset is identical in the MongoDB database, meaning the same business insight can be retrieved.
 -- Write the equivalent query for MongoDB. See query_task2_bonus.mongodb.js
+SELECT first_name, last_name FROM staff
+WHERE role = 'Cook';
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
@@ -16,5 +18,5 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
---
+-- Your thinking: ข้อนี้แนวคิดคล้ายกับข้อที่แล้วแค่เปลี่ยน Table เป็น Staff และ column เป็น ชื่อ นามสกุล
+-- ใช้ Where ในการเลือกแค่ role เป็น Cook
