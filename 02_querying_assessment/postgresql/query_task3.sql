@@ -11,10 +11,10 @@
 -- Write the equivalent query for MongoDB. See query_task3_bonus.mongodb.js
 --SELECT * FROM orders;
 
-SELECT staff.first_name, staff.last_name, COUNT(orders.staff_id) AS total_orders FROM orders
+SELECT staff.first_name || ' ' || staff.last_name AS full_name, COUNT(orders.staff_id) AS total_orders FROM orders
 JOIN staff 
 ON orders.staff_id = staff.staff_id
-GROUP BY staff.staff_id, staff.first_name, staff.last_name
+GROUP BY staff.staff_id, full_name
 ORDER BY total_orders DESC;
 
 -- ---------------------------------------------------------------
@@ -29,4 +29,4 @@ ORDER BY total_orders DESC;
 -- และการ count เพื่อนับจำนวนคนที่ทำ order สูงสุดเลยเริ่มจากศึกษาคำสั่ที่ต้องใช้ทั้งหมดก่อน
 -- จุดที่ต้องไม่งงในข้อนี้คือต้องใส่ชื่อ table ก่อน คอลัมน์ เช่น table.column1 ไม่งั้นจะสับสน
 -- และการที่ผลลัพธ์จากการ Count ต้องนำมาสร้างชื่อคอลัมน์ว่า total orders
---
+-- มีจุดนึงเกือบลืมแต่กลับมาอ่านโจทย์อีกทีว่าเราต้อง concatenate ชื่อนามสกุลเขาด้วยกันตรงนี้ไม่ยากครับใช้ || และ AS เป็นชื่อใหม่

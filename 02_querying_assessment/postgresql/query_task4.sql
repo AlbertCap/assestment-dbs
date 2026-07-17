@@ -8,6 +8,14 @@
 -- Bonus: The dataset is identical in the MongoDB database, meaning the same business insight can be retrieved.
 -- Write the equivalent query for MongoDB. See query_task4_bonus.mongodb.js
 
+SELECT ingredients.name, ingredients.stock_level FROM ingredients
+JOIN suppliers
+ON ingredients.supplier_id  = suppliers.supplier_id
+WHERE suppliers.supplier_id = 3
+ORDER BY ingredients.stock_level ASC;
+
+
+
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
 -- ---------------------------------------------------------------
@@ -16,5 +24,7 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ข้อนี้อยากแรกคือต้อง join 2 ตารางเพื่อหาข้อมูลที่ตรงกันของ supplier กับ ingrediant
+-- พอรู้ว่าโจทย์นี้ suppliers id = 3 ก็ ใช้ where เพื่อกรองให้เหลือแค่ suppliers ดังกล่าวตามโจทย์
+-- stock_level ที่เอาเข้มาโชว์ด้วยผมตั้งใจเพราะตามโจทย์บอกว่าต้องประเมินผลกระทบ ผมเลยคิดว่าต้องมี stock_level ครับ
 --
