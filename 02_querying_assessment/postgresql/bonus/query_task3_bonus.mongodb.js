@@ -10,6 +10,29 @@
 // The result should show each staff member's full name and their total order count,
 // ordered by the count in descending order.
 
+use("chrome-burger-db");
+db.orders.aggregate([
+  {
+    $group: {
+      _id: {
+        firstName: "$staff.first_name",
+        lastName: "$staff.last_name"
+      },
+      totalOrders: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      fullName: { $concat: ["$_id.firstName", " ", "$_id.lastName"] },
+      totalOrders: 1
+    }
+  },
+  {
+    $sort: { totalOrders: -1 }
+  }
+]);
+
 // ---------------------------------------------------------------
 // Your thinking process (required)
 // ---------------------------------------------------------------
@@ -18,5 +41,8 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
-//
+// Your thinking: ข้อนี้ต้องให้ AI ช่วยไกด์
+// ลองทำหลายๆวิธียังไมไ่ด้ ได้มากว่าคือนับจำนวรวมที่ 19 เลยลองให้ AI ช่วยไกด์แล้วสรุปได้ว่า
+// สิ่งที่ต้องทำอย่างแรกคือสร้างกลุ่มให้พนักงานแต่ละคนโดยคำสั่ง group 
+// จากนั้นก็ใช้คำสั่ง totalOrders: { $sum: 1 } ซึ่งไม่ใช่การบวกที่ staff_id แต่เป็นการบวกทุกครั้ง
+// ที่มีชื่อพนักกงานซ้ำกันจากการที่เราสร้าง group ไว้
