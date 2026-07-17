@@ -8,6 +8,9 @@
 -- Hint: Write a query to find the name and price of all rows in the MenuItems table
 -- where the price is less than 10.
 
+SELECT name, price FROM MenuItems
+WHERE price < 10.00;
+
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
 -- ---------------------------------------------------------------
@@ -16,5 +19,5 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ข้อนี้ยัง basic อยู่ครับที่ต้องคิดคือเงื่อนไขที่ต้องใช้คือ price < เท่าไร
 --
