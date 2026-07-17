@@ -10,7 +10,7 @@
 // Write the equivalent query for PostgreSQL. See query_task2_bonus.sql
 use("chrome-burger-db");
 
-db.orders.find({"staff.staff_id": ObjectId("634d00000000000000000011")},{order_date: 1, total_price: 1});
+db.orders.find({"staff.staff_id": ObjectId("634d00000000000000000011")},{_id: 0, order_date: 1, total_price: 1});
 
 // ---------------------------------------------------------------
 // Your thinking process (required)

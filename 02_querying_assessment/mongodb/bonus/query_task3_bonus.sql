@@ -8,6 +8,9 @@
 -- Hint: Write a query to find the name of all rows in the Ingredients table
 -- where the stock_level is greater than or equal to 100.
 
+SELECT * From Ingredients
+WHERE stock_level >= 100;
+
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
 -- ---------------------------------------------------------------
@@ -16,5 +19,5 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ข้อนี้จุดที่ต้องคิดคือต้องใช้เงื่อนไขกรอง stock_level ที่เท่ากับหรือมากกว่า 100
 --

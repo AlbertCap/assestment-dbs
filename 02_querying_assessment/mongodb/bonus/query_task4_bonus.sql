@@ -8,6 +8,9 @@
 -- Hint: Write a query that uses an aggregate function on the Orders table
 -- to sum the total_price across all orders, returning the result as total_revenue.
 
+SELECT SUM(total_price) AS total_revenue FROM Orders;
+
+
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
 -- ---------------------------------------------------------------
@@ -16,5 +19,6 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
---
+-- Your thinking: ข้อนี้ตอนแรกดูยากแต่พอลองเขียนง่ายครับเพราะได้ลองใช้ COUNT ในโจทย์ SQL มาก่อนแล้ว
+-- เพราะผมลองไป Search ใน w33 เกี่ยวกับ Aggregation ของ SQL แล้วเจอว่า SUM มันใช้เหมือนกบ COUNT เลยลอง
+-- พิมพ์ Query แบบเดียวกันดูครับ
