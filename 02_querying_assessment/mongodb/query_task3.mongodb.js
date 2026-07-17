@@ -7,6 +7,9 @@
 
 // Bonus: The dataset is identical in the PostgreSQL database, meaning the same business insight can be retrieved.
 // Write the equivalent query for PostgreSQL. See query_task3_bonus.sql
+use("chrome-burger-db");
+
+db.ingredients.find({stock_level: {$gte: 100.00}});
 
 // ---------------------------------------------------------------
 // Your thinking process (required)
@@ -16,5 +19,6 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:
+// Your thinking: ข้อนี้ที่คิดอย่างแรกคือต้องใช้ operater กับค่า stock เพื่อหาสินค้าในสต๊อกกี่เท่ากับหรือมากกว่า 100 เลยไม่ยากครับเพราะใช้
+// แค่การเช็คด้วย $gte ที่เหลือก็ไปดูว่าต้องดึงค่าสต๊อกว่า document ชื่ออะไร (stock_level)
 //
